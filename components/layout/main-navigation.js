@@ -6,9 +6,7 @@ const MainNavigation = () => {
   return (
     <header>
       <Link href="/">
-        <a>
-          <Logo />
-        </a>
+        <Logo />
       </Link>
       <nav>
         <ul>
