@@ -9,18 +9,20 @@ const PostItem = ({ post: { date, excerpt, image, slug, title } }) => {
       month: "long",
       year: "numeric",
     }),
-    imagePath = `/images/posts/${slug}/${image}`;
+    imagePath = `/images/posts/${slug}/${image}`,
+    linkPath = `/posts/${slug}`;
 
   return (
     <li className={classes.post}>
-      <Link>
+      <Link href={linkPath}>
         <div className={classes.image}>
           <Image
             alt={title}
-            height={200}
             href={slug}
+            fill
+            priority
+            sizes="100%"
             src={imagePath}
-            width={300}
           />
         </div>
         <div className={classes.content}>
