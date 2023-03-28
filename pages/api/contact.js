@@ -16,6 +16,8 @@ function handler(req, res) {
       return res.status(422).json({ message: "Invalid input." });
     }
 
+    console.log({ email, message, name });
+
     // store in a database
     return res.status(201).json({ message: "Successfully stored message!" });
   }
